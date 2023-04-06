@@ -33,7 +33,27 @@ int sommaElementiArray(int[] numbers)
     return somma;
 }
 
-int[] numbers = { 2, 6, 7, 5, 3, 9 };
+Console.WriteLine("Su quanti numeri vuoi lavorare?");
+
+int n;
+
+while(!int.TryParse(Console.ReadLine(), out n))
+    Console.WriteLine("Inserisci un numero valido!");
+
+int[] numbers = new int[n];
+
+Console.WriteLine("Inserisci ora i numeri");
+
+for (int i = 0; i < n; i++)
+{
+    if (!int.TryParse(Console.ReadLine(), out numbers[i]))
+    {
+        Console.WriteLine("Numero non valido. Riprovare");
+        i--;
+    }
+    else
+        Console.WriteLine("Numero salvato!");
+}
 
 StampaArray(numbers);
 
