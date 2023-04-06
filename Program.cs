@@ -32,3 +32,13 @@ int sommaElementiArray(int[] numbers)
         somma += numbers[i];
     return somma;
 }
+
+int[] numbers = { 2, 6, 7, 5, 3, 9 };
+
+StampaArray(numbers);
+
+StampaArray(ElevaArrayAlQuadrato(numbers));
+
+Console.WriteLine(sommaElementiArray(numbers));
+
+Console.WriteLine(sommaElementiArray(ElevaArrayAlQuadrato(numbers)));
